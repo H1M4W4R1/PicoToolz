@@ -153,8 +153,6 @@ int sq(int a)
 
 void shiftOut(int dataPin, int clockPin, int bitOrder, int value)
 {
-    digitalWrite(clockPin, 0);
-    delayMicroseconds(SHIFT_DELAY_US);
     for (int q = 0; q < 8; q++) {
         if(bitOrder == MSB_FIRST) {
             digitalWrite(dataPin, value & 1 << (7-q));
