@@ -23,7 +23,7 @@ Supported methods:
 - `UART eol()` - writes EOL to UART (default CRLF)
 - `UART crlf()` - writes CR LF to UART
 - `UART lf()` writes LF to UART
-- `bool setPins(uint8_t rx, uint8_t tx)` - sets UART pins. Needs to be used before begin()
+- `bool setPins(uint8_t rx, uint8_t tx)` - sets UART pins. Needs to be used before begin()  
 By default Serial1 uses 0/1 pins and Serial2 users 6/7 pins
 
 # I2C
@@ -37,7 +37,7 @@ Supported methods:
 - `I2C enslave(uint8_t addr)` - switches I2C port to Slave mode
 - `I2C free()` - switches I2C port to Master mode
 - `I2C setBaudRate(uint32_t newBaudRate)` - changes I2C Baud Rate
-- `I2C setPins(uint8_t sda, uint8_t scl)` - sets I2C pins. Needs to be used before begin()
+- `I2C setPins(uint8_t sda, uint8_t scl)` - sets I2C pins. Needs to be used before begin()  
 By default I2C1 uses 9/10 pins and I2C2 uses 11/12 pins.
 
 # Why it returns I2C / UART objects?
