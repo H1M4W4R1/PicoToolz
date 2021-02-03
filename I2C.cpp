@@ -66,6 +66,11 @@ I2C I2C::setPins(uint8_t sda, uint8_t scl) {
     return *this;
 }
 
+I2C I2C::setAddress(uint8_t addr) {
+    address = addr;
+    return *this;
+}
+
 I2C I2C1(i2c1, 9, 10);
 I2C I2C2(i2c0, 11, 12);
 
