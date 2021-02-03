@@ -44,7 +44,7 @@ public:
     UART read(uint8_t* buffer, uint length);
     UART write(uint8_t* bytes);
     UART write(char* text);
-    UART write(long num, uint8_t base);
+    UART write(long num, uint8_t base = DEC);
     UART write(double num);
     UART write(float num);
     UART eol();
