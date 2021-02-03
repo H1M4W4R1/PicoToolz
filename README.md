@@ -38,7 +38,7 @@ Supported methods:
 - `I2C free()` - switches I2C port to Master mode
 - `I2C setBaudRate(uint32_t newBaudRate)` - changes I2C Baud Rate
 - `I2C setPins(uint8_t sda, uint8_t scl)` - sets I2C pins. Needs to be used before begin() 
-- `I2C setAddresS(uint8_t addr)` - sets address inside class to be used with read and write commands.
+- `I2C setAddresS(uint8_t addr)` - sets address inside class to be used with read and write commands.  
 By default I2C1 uses 9/10 pins and I2C2 uses 11/12 pins.
 
 # Why it returns I2C / UART objects?
