@@ -6,6 +6,8 @@
 #include "hardware/adc.h"
 #include "arduino.h"
 
+int isAdcInitialized = 0;
+
 int digitalRead(int pin)
 {
     return gpio_get(pin);
@@ -47,6 +49,11 @@ void analogSetResolution(int pin, int resolution)
 
 int analogRead(int pin)
 {
+    if(!isAdcInitialized) {
+        adc_init();
+        isAdcInitialized = true;
+    }
+
     int adc_pin = -1;
     switch(pin)
     {

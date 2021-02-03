@@ -72,8 +72,8 @@ void toneWithDuration(int pin, int freq, int duration);
 int micros();
 int millis();
 
-int random();
-int random(int max);
+//int random();
+//int random(int max);
 //int random(int min, int max);
 void randomSeed(int seed);
 
