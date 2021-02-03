@@ -168,7 +168,5 @@ void shiftOut(int dataPin, int clockPin, int bitOrder, int value)
         // Send CLK signal
         digitalWrite(clockPin, 1);
         delayMicroseconds(SHIFT_DELAY_US);
-        digitalWrite(clockPin, 0);
-        delayMicroseconds(SHIFT_DELAY_US);
     }
 }
