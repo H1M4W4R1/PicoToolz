@@ -1,10 +1,15 @@
 /cmake-build-debug/
-/Blinky.c
+/Blinky.cpp
 /Blinky.h
 /CMakeLists.txt
 /pico_sdk_import.cmake
-/sketch.c
+/sketch.cpp
 /sketch.h
 /build/
 /.vscode/
 /cmake-build-debug/
+/.idea/.gitignore
+/.idea/Blinky.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
