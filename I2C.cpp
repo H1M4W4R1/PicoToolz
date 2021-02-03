@@ -60,6 +60,12 @@ I2C::I2C(i2c_inst_t *iface, int sda, int scl) {
     sclPin = scl;
 }
 
+I2C I2C::setPins(uint8_t sda, uint8_t scl) {
+    sdaPin = sda;
+    sclPin = scl;
+    return *this;
+}
+
 I2C I2C1(i2c1, 9, 10);
 I2C I2C2(i2c0, 11, 12);
 

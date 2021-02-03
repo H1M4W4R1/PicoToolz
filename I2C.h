@@ -29,6 +29,7 @@ class I2C {
         I2C enslave(uint8_t addr);
         I2C free();
         I2C setBaudRate(uint32_t newBaudRate);
+    I2C setPins(uint8_t sda, uint8_t scl);
 };
 
 
