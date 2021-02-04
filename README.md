@@ -24,7 +24,7 @@ Supported methods:
 - `UART crlf()` - writes CR LF to UART
 - `UART lf()` writes LF to UART
 - `bool setPins(uint8_t rx, uint8_t tx)` - sets UART pins. Needs to be used before begin()  
-By default Serial1 uses 0/1 pins and Serial2 users 6/7 pins
+By default Serial1 uses 0/1 pins and Serial2 uses 6/7 pins
 
 # I2C
 Supported methods:
