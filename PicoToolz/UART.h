@@ -34,22 +34,22 @@ public:
     uint8_t txPin;
     uint8_t rxPin;
     uart_inst_t* interface;
-    UART begin(uint32_t baudRate = DEFAULT_BAUD_RATE, uint8_t dataBits = DATA_BITS_8, uint8_t stopBits = STOP_BITS_1,
+    UART* begin(uint32_t baudRate = DEFAULT_BAUD_RATE, uint8_t dataBits = DATA_BITS_8, uint8_t stopBits = STOP_BITS_1,
                uart_parity_t parity = UART_PARITY_NONE);
-    UART end();
+    UART* end();
     uint32_t available();
     bool availableToWrite();
 
     uint8_t read();
-    UART read(uint8_t* buffer, uint length);
-    UART write(uint8_t* bytes);
-    UART write(char* text);
-    UART write(long num, uint8_t base = DEC);
-    UART write(double num);
-    UART write(float num);
-    UART eol();
-    UART crlf();
-    UART lf();
+    UART* read(uint8_t* buffer, uint length);
+    UART* write(uint8_t* bytes);
+    UART* write(char* text);
+    UART* write(long num, uint8_t base = DEC);
+    UART* write(double num);
+    UART* write(float num);
+    UART* eol();
+    UART* crlf();
+    UART* lf();
     bool setPins(uint8_t rx, uint8_t tx);
 
 
