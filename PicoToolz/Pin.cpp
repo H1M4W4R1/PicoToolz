@@ -7,7 +7,7 @@
 #include <cstdio>
 #include "pico/stdlib.h"
 #include "hardware/pwm.h"
-#include "hardware/adc.h";
+#include "hardware/adc.h"
 
 Pin::Pin(int number) {
     id = number;
@@ -52,8 +52,8 @@ Pin *Pin::analogWrite(float value) {
     int ch = pwm_gpio_to_channel(id);
     int slice = pwm_gpio_to_slice_num(id);
 
-    pwm_set_wrap(slice, 65535);
-    pwm_set_chan_level(slice, ch, 65535*value);
+    pwm_set_wrap(slice, pwmLength);
+    pwm_set_chan_level(slice, ch, value * (float) pwmLength);
     pwm_set_enabled(slice, true);
     return this;
 }
@@ -74,4 +74,10 @@ int Pin::analogRead() {
 float Pin::analogReadVoltage(float vref) {
     const float conversion_factor = vref / (1 << 12);
     return conversion_factor * (float) analogRead();
+}
+
+Pin *Pin::setFrequency_kHz(float kHz) {
+    int value = (int)((125000.0f / kHz));
+    pwmLength = value;
+    return this;
 }

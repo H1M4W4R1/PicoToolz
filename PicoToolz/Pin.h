@@ -8,6 +8,7 @@
 
 class Pin {
     int id;
+    int pwmLength;
 
 public:
     Pin* digitalWrite(int value);
@@ -16,6 +17,7 @@ public:
     Pin* analogWrite(float value);
     int analogRead();
     float analogReadVoltage(float vref = 3.3f);
+    Pin* setFrequency_kHz(float kHz);
 
     Pin* delay_ms(int value);
     Pin* delay_us(int value);
